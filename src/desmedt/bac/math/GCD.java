@@ -16,9 +16,13 @@ The GCD is the largest factor that divides all numbers in the array.
 public class GCD {
 
     public static void main(String[] args) {
-        TestUtils.test(new int[]{ 84, 70, 42, 56 }, 14, GCD::gcds);
-        TestUtils.test(new int[]{ 19, 38, 76, 133 }, 19, GCD::gcds);
-        TestUtils.test(new int[]{ 120, 300, 95, 425, 625 }, 5, GCD::gcds);
+        test(new int[]{ 84, 70, 42, 56 }, 14);
+        test(new int[]{ 19, 38, 76, 133 }, 19);
+        test(new int[]{ 120, 300, 95, 425, 625 }, 5);
+    }
+
+    public static void test(int[] arr, int expected) {
+        TestUtils.test(arr, expected, GCD::gcds);
     }
 
     public static int gcds(int[] arr) {

@@ -18,9 +18,13 @@ keepMultiplying(4) ➞ 0
 public class MultiplicativePersistence {
 
     public static void main(String[] args) {
-        TestUtils.test(39, 3, MultiplicativePersistence::keepMultiplying);
-        TestUtils.test(999, 4, MultiplicativePersistence::keepMultiplying);
-        TestUtils.test(4, 0, MultiplicativePersistence::keepMultiplying);
+        test(39, 3);
+        test(999, 4);
+        test(4, 0);
+    }
+
+    public static void test(int input, int result) {
+        TestUtils.test(input, result, MultiplicativePersistence::keepMultiplying);
     }
 
     public static int keepMultiplying(int num) {

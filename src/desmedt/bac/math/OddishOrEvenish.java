@@ -28,11 +28,15 @@ public class OddishOrEvenish {
     public static final String ODDISH = "Oddish";
 
     public static void main(String[] args) {
-        TestUtils.test(121, EVENISH, OddishOrEvenish::oddishOrEvenish);
-        TestUtils.test(41, ODDISH, OddishOrEvenish::oddishOrEvenish);
-        TestUtils.test(43, ODDISH, OddishOrEvenish::oddishOrEvenish);
-        TestUtils.test(373, ODDISH, OddishOrEvenish::oddishOrEvenish);
-        TestUtils.test(4433, EVENISH, OddishOrEvenish::oddishOrEvenish);
+        test(121, EVENISH);
+        test(41, ODDISH);
+        test(43, ODDISH);
+        test(373, ODDISH);
+        test(4433, EVENISH);
+    }
+
+    public static void test(int input, String expected) {
+        TestUtils.test(input, expected, OddishOrEvenish::oddishOrEvenish);
     }
 
     public static String oddishOrEvenish(int num) {

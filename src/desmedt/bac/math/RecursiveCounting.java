@@ -18,12 +18,16 @@ You are expected to solve this challenge via recursion.
 public class RecursiveCounting {
 
     public static void main(String[] args) {
-        TestUtils.test(4666L, 4, RecursiveCounting::countDigits);
-        TestUtils.test(544L, 3, RecursiveCounting::countDigits);
-        TestUtils.test(121317L, 6, RecursiveCounting::countDigits);
-        TestUtils.test(0L, 1, RecursiveCounting::countDigits);
-        TestUtils.test(12345L, 5, RecursiveCounting::countDigits);
-        TestUtils.test(1289396387328L, 13, RecursiveCounting::countDigits);
+        test(4666, 4);
+        test(544, 3);
+        test(121317, 6);
+        test(0, 1);
+        test(12345, 5);
+        test(1289396387328L, 13);
+    }
+
+    public static void test(long num, int expected) {
+        TestUtils.test(num, expected, RecursiveCounting::countDigits);
     }
 
     public static int countDigits(long n) {

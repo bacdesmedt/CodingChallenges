@@ -29,10 +29,14 @@ public class RightAngledTriangle {
     public static final String SIDE = "side";
 
     public static void main(String[] args) {
-        TestUtils.test(new int[]{ 30, 60 }, ANGLE, true, RightAngledTriangle::isRightAngle);
-        TestUtils.test(new int[]{ 20, 20, 20, 20 }, ANGLE, false, RightAngledTriangle::isRightAngle);
-        TestUtils.test(new int[]{ 4, 5, 3 }, SIDE, true, RightAngledTriangle::isRightAngle);
-        TestUtils.test(new int[]{ 4, 5 }, SIDE, true, RightAngledTriangle::isRightAngle);
+        test(new int[]{ 30, 60 }, ANGLE, true);
+        test(new int[]{ 20, 20, 20, 20 }, ANGLE, false);
+        test(new int[]{ 4, 5, 3 }, SIDE, true);
+        test(new int[]{ 4, 5 }, SIDE, true);
+    }
+
+    public static void test(int[] input, String description, boolean expected) {
+        TestUtils.test(input, description, expected, RightAngledTriangle::isRightAngle);
     }
 
     public static boolean isRightAngle(int[] arr, String description) {

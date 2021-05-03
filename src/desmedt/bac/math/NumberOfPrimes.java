@@ -16,9 +16,13 @@ primeNumbers(30) ➞ 10
 public class NumberOfPrimes {
 
     public static void main(String[] args) {
-        TestUtils.test(10, 4, NumberOfPrimes::countPrimesInRange);
-        TestUtils.test(20, 8, NumberOfPrimes::countPrimesInRange);
-        TestUtils.test(30, 10, NumberOfPrimes::countPrimesInRange);
+        test(10, 4);
+        test(20, 8);
+        test(30, 10);
+    }
+
+    public static void test(int range, int expected) {
+        TestUtils.test(range, expected, NumberOfPrimes::countPrimesInRange);
     }
 
     public static int countPrimesInRange(int range) {

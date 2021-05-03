@@ -23,10 +23,14 @@ Return the result as an array.
 public class TriangleChallenge {
 
     public static void main(String[] args) {
-        TestUtils.test(1, new double[]{ 2.0, 1.73 }, TriangleChallenge::otherSides);
-        TestUtils.test(12, new double[]{ 24.0, 20.78 }, TriangleChallenge::otherSides);
-        TestUtils.test(2, new double[]{ 4.0, 3.46 }, TriangleChallenge::otherSides);
-        TestUtils.test(3, new double[]{ 6.0, 5.2 }, TriangleChallenge::otherSides);
+        test(1, new double[]{ 2.0, 1.73 });
+        test(12, new double[]{ 24.0, 20.0 });
+        test(2, new double[]{ 4.0, 3.46 });
+        test(3, new double[]{ 6.0, 5.2 });
+    }
+
+    public static void test(int n, double[] expected) {
+        TestUtils.test(n, expected, TriangleChallenge::otherSides);
     }
 
     public static double[] otherSides(int a) {
