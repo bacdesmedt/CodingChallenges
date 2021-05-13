@@ -39,7 +39,7 @@ public class DuplicateEncoder {
 
         String output ="";
         for (char c : word.toLowerCase().toCharArray()) {
-            if (map.get(Character.toString((char)c)) > 1)
+            if (map.get(Character.toString(c)) > 1)
                 output = output.concat(")");
             else output = output.concat("(");
         }
